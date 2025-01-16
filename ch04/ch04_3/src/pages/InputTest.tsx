@@ -7,11 +7,11 @@ export default function InputTest() {
   const [checked, setChecked] = useState<boolean>(false);
   const onChangeValue = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
-    setValue((notUsed) => e.target.value);
+    setValue(e.target.value);
   }, []);
   const onChangeChecked = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.checked);
-    setChecked((notUsed) => e.target.checked);
+    setChecked(e.target.checked);
   }, []);
   return (
     <section className="mt-4">

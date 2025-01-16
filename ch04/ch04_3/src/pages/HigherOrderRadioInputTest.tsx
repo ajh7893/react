@@ -5,7 +5,7 @@ export default function HigherOrderRadioInputTest() {
   const jobTitles = useMemo(() => D.makeArray(4).map(D.randomJobTitle), []);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const onChange = useCallback(
-    (index: number) => () => setSelectedIndex((notUsed) => index),
+    (index: number) => () => setSelectedIndex(index),
     []
   );
   const radioInputs = useMemo(

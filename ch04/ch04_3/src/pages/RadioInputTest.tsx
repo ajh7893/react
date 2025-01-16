@@ -8,7 +8,7 @@ export default function RadioInputTest() {
     jobTitles[0]
   );
   const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setSelectedJobTitle((notUsed) => e.target.value);
+    setSelectedJobTitle(e.target.value);
   }, []);
   const radioInputs = useMemo(
     () =>
